@@ -71,36 +71,53 @@ body {
 }
 
 .info-panel-inner {
+    position: relative;
+    /* 让 × 可以绝对定位 */
     background: #f5f1e8;
-    padding: 40px 60px;
+    padding: 50px 60px 30px;
+    /* 上方多留一点给 × */
     border-radius: 12px;
     text-align: center;
     max-width: 500px;
     line-height: 1.8;
 }
 
+/* × 关闭按钮 */
+.info-close {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    background: none;
+    border: none;
+    font-size: 26px;
+    line-height: 1;
+    color: #999;
+    cursor: pointer;
+    padding: 4px 8px;
+    transition: color 0.2s;
+}
+
+.info-close:hover {
+    color: #8B0000;
+}
+
+/* 标题加粗 */
 .info-panel-inner h2 {
     font-size: 28px;
     letter-spacing: 6px;
     margin-bottom: 20px;
-    font-weight: 400;
+    font-weight: 700;
+    /* 加粗 */
     color: #4a4a4a;
 }
 
-.info-panel-inner button {
-    margin-top: 24px;
-    padding: 8px 28px;
-    border: 1px solid #8B0000;
-    background: none;
-    color: #8B0000;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: all 0.3s;
-}
-
-.info-panel-inner button:hover {
-    background: #8B0000;
-    color: #fff;
+/* 底部制作组小字 */
+.info-footer {
+    margin-top: 30px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #aaa;
+    text-align: center;
 }
 
 /* 踏上旅程按钮 */
