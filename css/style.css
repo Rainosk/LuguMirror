@@ -186,17 +186,89 @@ body {
 }
 
 /* ==================== 02 VN ==================== */
+/* ==================== 02 VN 章节菜单 ==================== */
 .vn-page {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    background: #000;
+    position: relative;
+    background: #0a0e1a;
 }
 
-.vn-content {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+/* 背景层：支持淡入淡出切换 */
+.vn-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('../images/vn-bg.png');
+    background-size: cover;
+    background-position: center;
+    transition: opacity 0.5s ease;
+}
+
+/* 灰色蒙版 */
+.vn-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(20, 25, 40, 0.55);
+    pointer-events: none;
+}
+
+/* 章节菜单容器 */
+.vn-menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 520px;
+    max-width: 85vw;
+    z-index: 10;
+}
+
+/* 单个章节框 */
+.vn-chapter {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 15px 28px;
+    background: rgba(245, 241, 232, 0.12);
+    border: 1px solid rgba(245, 241, 232, 0.28);
+    border-radius: 8px;
+    color: #f5f1e8;
+    font-size: 17px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    text-align: left;
+    font-family: inherit;
+}
+
+.vn-chapter:hover {
+    background: rgba(118, 55, 55, 0.55);
+    border-color: rgba(245, 241, 232, 0.6);
+    transform: translateX(10px);
+    box-shadow: 0 0 24px rgba(139, 0, 0, 0.35);
+}
+
+.vn-chapter.active {
+    background: rgba(111, 26, 26, 0.75);
+    border-color: #f5f1e8;
+    box-shadow: 0 0 30px rgba(139, 0, 0, 0.5);
+}
+
+.vn-num {
+    font-size: 13px;
+    opacity: 0.65;
+    min-width: 22px;
+    font-weight: 300;
+}
+
+.vn-title {
+    flex: 1;
 }
 
 /* ==================== 03 Lib ==================== */

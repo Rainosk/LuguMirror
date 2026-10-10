@@ -10,9 +10,44 @@
 
 <body class="vn-page">
 
-    <img src="images/content.png" alt="视觉小说" class="vn-content">
+    <!-- 背景层：初始为 vn-bg.png -->
+    <div class="vn-bg" id="vnBg"></div>
+
+    <!-- 灰色蒙版 -->
+    <div class="vn-overlay"></div>
+
+    <!-- 章节菜单 -->
+    <div class="vn-menu">
+        <button class="vn-chapter" data-bg="images/vn-bg0.png">
+            <span class="vn-num">0</span>
+            <span class="vn-title">序章：镜中的请柬</span>
+        </button>
+        <button class="vn-chapter" data-bg="images/vn-bg1.png">
+            <span class="vn-num">1</span>
+            <span class="vn-title">初见泸沽湖</span>
+        </button>
+        <button class="vn-chapter" data-bg="images/vn-bg2.png">
+            <span class="vn-num">2</span>
+            <span class="vn-title">母亲的镜子</span>
+        </button>
+        <button class="vn-chapter" data-bg="images/vn-bg3.png">
+            <span class="vn-num">3</span>
+            <span class="vn-title">婚礼之前</span>
+        </button>
+        <button class="vn-chapter" data-bg="images/vn-bg4.png">
+            <span class="vn-num">4</span>
+            <span class="vn-title">镜圆</span>
+        </button>
+        <button class="vn-chapter" data-bg="images/vn-bg5.png">
+            <span class="vn-num">5</span>
+            <span class="vn-title">尾声：归途</span>
+        </button>
+    </div>
+
+    <!-- 返回按钮 -->
     <a href="overview.html" class="back-btn">← 返回</a>
 
+    <script src="js/vn.js"></script>
 </body>
 
 </html>
