@@ -248,16 +248,16 @@ body {
 }
 
 .vn-chapter:hover {
-    background: rgba(118, 55, 55, 0.55);
+    background: rgba(54, 58, 105, 0.55);
     border-color: rgba(245, 241, 232, 0.6);
     transform: translateX(10px);
-    box-shadow: 0 0 24px rgba(139, 0, 0, 0.35);
+    box-shadow: 0 0 24px rgba(32, 33, 114, 0.35);
 }
 
 .vn-chapter.active {
-    background: rgba(111, 26, 26, 0.75);
+    background: rgba(27, 34, 100, 0.75);
     border-color: #f5f1e8;
-    box-shadow: 0 0 30px rgba(139, 0, 0, 0.5);
+    box-shadow: 0 0 30px rgba(39, 44, 110, 0.5);
 }
 
 .vn-num {
@@ -380,21 +380,32 @@ body {
     font-weight: 300;
 }
 
-/* ==================== 通用返回按钮 ==================== */
+/* ==================== 通用返回键 ==================== */
 .back-btn {
     position: fixed;
     top: 30px;
     left: 30px;
-    color: #666;
-    text-decoration: none;
-    font-size: 16px;
-    padding: 8px 16px;
-    border-radius: 20px;
-    transition: all 0.3s;
-    z-index: 60;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.back-btn img {
+    width: 100%;
+    height: 100%;
+    display: block;
 }
 
 .back-btn:hover {
-    background: rgba(0, 0, 0, 0.05);
-    color: #8B0000;
+    transform: scale(1.1);
+    opacity: 0.85;
+}
+
+/* lib 页的返回键需要避开顶部菜单栏 */
+.lib-page .back-btn {
+    top: 100px;
 }
