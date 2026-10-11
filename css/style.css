@@ -170,23 +170,41 @@ body {
     flex-wrap: wrap;
 }
 
+/* 单个产品卡片（图片 + 说明图） */
 .product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
     cursor: pointer;
     transition: transform 0.4s ease, filter 0.4s ease;
 }
 
-.product-card img {
+/* 卡片主图 */
+.card-img {
     width: 360px;
     display: block;
 }
 
+/* 说明图 */
+.card-label {
+    width: 260px;
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+/* 悬停时整卡上浮 */
 .product-card:hover {
     transform: translateY(-20px);
     filter: drop-shadow(0 25px 30px rgba(0, 0, 0, 0.25));
 }
 
+/* 悬停时说明图也稍微提亮 */
+.product-card:hover .card-label {
+    opacity: 1;
+}
+
 /* ==================== 02 VN ==================== */
-/* ==================== 02 VN 章节菜单 ==================== */
 .vn-page {
     width: 100vw;
     height: 100vh;
