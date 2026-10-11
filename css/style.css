@@ -165,7 +165,7 @@ body {
 .overview-container {
     display: flex;
     gap: 90px;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -188,7 +188,11 @@ body {
 
 /* 说明图 */
 .card-label {
-    width: 260px;
+    height: 70px;
+    /* 统一高度，两张图对齐 */
+    width: auto;
+    object-fit: contain;
+    /* 保持比例，不拉伸 */
     display: block;
     transition: opacity 0.3s ease;
 }
